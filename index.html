@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AETHER Gym</title>
+<meta name="description" content="Plan and log your gym training: body-part goals, sets and reps, rest timer, calendar and progress photos.">
+<meta name="theme-color" content="#f3f4fa">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Gym">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&amp;family=Geist+Mono:wght@400..600&amp;display=swap">
+<link rel="stylesheet" href="hub.css">
+<link rel="stylesheet" href="app-gym.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<!-- AETHER Gym, hosted version: accounts and storage on Supabase (supa.js), installable as an app (manifest + sw.js). -->
+<script>window.AETHER_SOLO="gym";</script>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supa.js"></script>
+<script src="hub.js"></script>
+<script src="theme.js"></script>
+<script src="app-gym.js"></script>
+<script>AETHER.start();
+if("serviceWorker" in navigator&&location.protocol==="https:")window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});</script>
+</body>
+</html>
